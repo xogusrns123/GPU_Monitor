@@ -1,6 +1,7 @@
 import os
 import csv
 import time
+from datetime import datetime
 
 # GPU 이름을 얻기 위한 nvidia-smi 명령어 실행
 gpu_names = os.popen("nvidia-smi --query-gpu=name,index --format=csv,noheader").read().strip().split('\n')
@@ -19,8 +20,10 @@ for gpu_name in gpu_names:
         writer.writerow(['Time', 'Temperature(°C)', 'Utilization(%)', 'Fan Speed(%)', 'Power Usage(W)', 'Power Max(W)', 'Memory Usage(MiB)', 'Memory Max(MiB)'])
 
 
+# monitoring 시작!
+print(f'start monitoring: {datetime.now()}')
 # 24시간 동안 1초 간격으로 GPU 정보를 수집
-for i in range(1820):
+for i in range(3600):
     
     # 각 GPU에 대해
     for gpu_name in gpu_names:

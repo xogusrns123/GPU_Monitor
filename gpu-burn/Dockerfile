@@ -20,5 +20,5 @@ WORKDIR /app
 
 RUN mkdir -p /app/data
 
-CMD ["sh", "-c", "./gpu_burn 10 > /app/data/gpu_status.txt"]
+CMD ["sh", "-c", "./gpu_burn 3600 > /app/data/gpu_status.txt"]
 # CMD ["sh", "-c", "./gpu_burn 40"]
