@@ -1,0 +1,15 @@
+gpu_info_0.csv
+gpu_info_1.csv
+gpu_info_2.csv
+gpu_info_3.csv
+
+gpu_status.txt
+
+
+
+# gpu burn
+gpu-burn/gpu_burn-drv\.o
+
+gpu-burn/compare\.ptx
+
+gpu-burn/gpu_burn
